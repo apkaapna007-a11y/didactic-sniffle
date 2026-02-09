@@ -48,14 +48,14 @@ export default function PersonaModal({ isOpen, onClose, editId }: PersonaModalPr
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-black/80 backdrop-blur-2xl z-[9999] flex items-center justify-center p-4"
         onClick={(e) => e.target === e.currentTarget && onClose()}
       >
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
-          className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-6 w-full max-w-2xl shadow-2xl border border-slate-700/50 max-h-[90vh] overflow-y-auto custom-scrollbar"
+          className="bg-slate-900/95 backdrop-blur-2xl rounded-2xl p-6 w-full max-w-2xl shadow-2xl border border-slate-700/50 max-h-[90vh] overflow-y-auto custom-scrollbar"
         >
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent flex items-center gap-2">

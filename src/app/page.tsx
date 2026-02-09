@@ -132,18 +132,21 @@ export default function Home() {
         </div>
       )}
 
-      <Sidebar
-        onOpenSettings={() => setSettingsOpen(true)}
-        onOpenPersonaModal={handleOpenPersonaModal}
-      />
+      <div className="flex h-full relative">
+        <Sidebar
+          onOpenSettings={() => setSettingsOpen(true)}
+          onOpenPersonaModal={handleOpenPersonaModal}
+        />
 
-      <div
-        className={`transition-all duration-300 ${
-          sidebarOpen ? 'md:ml-72' : ''
-        }`}
-      >
-        <div className="h-screen">
-          <ChatInterface />
+        <div
+          className={`flex-1 h-full relative transition-all duration-300 ${
+            sidebarOpen ? 'md:pl-72 pl-0' : 'pl-0'
+          }`}
+        >
+          <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-xl" />
+          <div className="relative h-full">
+            <ChatInterface />
+          </div>
         </div>
       </div>
 

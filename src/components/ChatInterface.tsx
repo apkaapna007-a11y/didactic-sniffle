@@ -183,8 +183,8 @@ export default function ChatInterface() {
   const displayMessages = activeConversation?.messages || [];
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
+    <div className="flex flex-col h-full bg-slate-950/95">
+      <div className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar">
         {displayMessages.length === 0 && !streamingContent && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
